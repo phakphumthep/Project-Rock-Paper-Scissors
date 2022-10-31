@@ -14,15 +14,27 @@ function getComputerChoice(){
     return ("You Lose! Scissors beats Paper");    
     else if (playerSelection === "Paper" && computerSelection === "Rock")
     return ("You Win! Paper beats Rock");
-    else if (playerSelection === "Sissors" && computerSelection === "Rock")
+    else if (playerSelection === "Scissors" && computerSelection === "Rock")
     return ("You Lose! Rock beats Scissors");
-    else if (playerSelection === "Sissors" && computerSelection === "Paper")
+    else if (playerSelection === "Scissors" && computerSelection === "Paper")
     return ("You Win! Scissors beats Paper");
     else  ("Error")
 }
 
-const playerSelection = "Paper";
+const playerSelection = prompt('Player Choose',"Rock","Paper","Scissors");
 const computerSelection = getComputerChoice();
-console.log(playerSelection)
-console.log(computerSelection)
-console.log(playRound(playerSelection, computerSelection));
+
+function game(){
+    for (let i = 0; i < 5; i++) {
+        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+    }
+}
